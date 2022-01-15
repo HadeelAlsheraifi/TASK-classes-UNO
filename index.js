@@ -31,8 +31,43 @@
 let cards = []; // You will use this array in step 6
 
 // Continue the code here 👇🏻
+ class PlayCard   {
+   constructor (number, color) {
+   this.number = number;
+   this.color = color;
+  }
 
-/**
+image () {
+   return `./images/${this.color}_${this.number}.png`
+          
+}
+ }
+ 
+const PlayCard1 = new PlayCard (1 ,"green");
+const PlayCard2 = new PlayCard (2 ,"Yellow");
+const PlayCard3 = new PlayCard(3 ,"red");
+const PlayCard4 = new PlayCard (4 ,"blue");
+console.log(PlayCard1, PlayCard2, PlayCard3, PlayCard4);
+
+cards.push(PlayCard1, PlayCard2, PlayCard3, PlayCard4);
+
+cards = [];
+const colors = ["Yellow","Red","Blue","Green"];
+colors.forEach(
+  color => { 
+    for (let i = 0; i < 10; i++){
+  const card = new PlayCard (i, color);
+  cards.push(card , card);
+
+}
+  }
+)
+
+
+
+ 
+
+/*
  *
  * Don't touch this code
  * This function is going to render the cards array to the HTML page,
